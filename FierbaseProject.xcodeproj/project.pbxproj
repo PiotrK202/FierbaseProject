@@ -6,11 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DFC7E6B22E658C2400F68CBC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DFC7E6B12E658C2400F68CBC /* FirebaseAnalytics */; };
+		DFC7E6B52E659C3500F68CBC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DFC7E6B42E659C3500F68CBC /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF2B8E032E65EB3700432358 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFC7E6982E65869300F68CBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFC7E69F2E65869300F68CBC;
+			remoteInfo = FierbaseProject;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		DF2B8DFF2E65EB3700432358 /* FierbaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FierbaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC7E6A02E65869300F68CBC /* FierbaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FierbaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		DF2B8E002E65EB3700432358 /* FierbaseProjectTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FierbaseProjectTests;
+			sourceTree = "<group>";
+		};
 		DFC7E6A22E65869300F68CBC /* FierbaseProject */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FierbaseProject;
@@ -19,10 +40,19 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DF2B8DFC2E65EB3700432358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFC7E69D2E65869300F68CBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC7E6B22E658C2400F68CBC /* FirebaseAnalytics in Frameworks */,
+				DFC7E6B52E659C3500F68CBC /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				DFC7E6A22E65869300F68CBC /* FierbaseProject */,
+				DF2B8E002E65EB3700432358 /* FierbaseProjectTests */,
+				DFC7E6B32E659C3500F68CBC /* Frameworks */,
 				DFC7E6A12E65869300F68CBC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,13 +73,44 @@
 			isa = PBXGroup;
 			children = (
 				DFC7E6A02E65869300F68CBC /* FierbaseProject.app */,
+				DF2B8DFF2E65EB3700432358 /* FierbaseProjectTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DFC7E6B32E659C3500F68CBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DF2B8DFE2E65EB3700432358 /* FierbaseProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2B8E052E65EB3700432358 /* Build configuration list for PBXNativeTarget "FierbaseProjectTests" */;
+			buildPhases = (
+				DF2B8DFB2E65EB3700432358 /* Sources */,
+				DF2B8DFC2E65EB3700432358 /* Frameworks */,
+				DF2B8DFD2E65EB3700432358 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF2B8E042E65EB3700432358 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DF2B8E002E65EB3700432358 /* FierbaseProjectTests */,
+			);
+			name = FierbaseProjectTests;
+			packageProductDependencies = (
+			);
+			productName = FierbaseProjectTests;
+			productReference = DF2B8DFF2E65EB3700432358 /* FierbaseProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DFC7E69F2E65869300F68CBC /* FierbaseProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFC7E6AB2E65869500F68CBC /* Build configuration list for PBXNativeTarget "FierbaseProject" */;
@@ -65,6 +128,8 @@
 			);
 			name = FierbaseProject;
 			packageProductDependencies = (
+				DFC7E6B12E658C2400F68CBC /* FirebaseAnalytics */,
+				DFC7E6B42E659C3500F68CBC /* FirebaseAuth */,
 			);
 			productName = FierbaseProject;
 			productReference = DFC7E6A02E65869300F68CBC /* FierbaseProject.app */;
@@ -80,6 +145,10 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					DF2B8DFE2E65EB3700432358 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = DFC7E69F2E65869300F68CBC;
+					};
 					DFC7E69F2E65869300F68CBC = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -94,17 +163,28 @@
 			);
 			mainGroup = DFC7E6972E65869300F68CBC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DFC7E6B02E658C2400F68CBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFC7E6A12E65869300F68CBC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DFC7E69F2E65869300F68CBC /* FierbaseProject */,
+				DF2B8DFE2E65EB3700432358 /* FierbaseProjectTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DF2B8DFD2E65EB3700432358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFC7E69E2E65869300F68CBC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +195,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DF2B8DFB2E65EB3700432358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFC7E69C2E65869300F68CBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +211,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DF2B8E042E65EB3700432358 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFC7E69F2E65869300F68CBC /* FierbaseProject */;
+			targetProxy = DF2B8E032E65EB3700432358 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		DF2B8E062E65EB3700432358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YFRR6NY5NF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MyIdentifier.FierbaseProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FierbaseProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FierbaseProject";
+			};
+			name = Debug;
+		};
+		DF2B8E072E65EB3700432358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YFRR6NY5NF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MyIdentifier.FierbaseProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FierbaseProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FierbaseProject";
+			};
+			name = Release;
+		};
 		DFC7E6A92E65869500F68CBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -261,6 +394,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -289,6 +423,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +440,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DF2B8E052E65EB3700432358 /* Build configuration list for PBXNativeTarget "FierbaseProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2B8E062E65EB3700432358 /* Debug */,
+				DF2B8E072E65EB3700432358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DFC7E69B2E65869300F68CBC /* Build configuration list for PBXProject "FierbaseProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -324,6 +468,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DFC7E6B02E658C2400F68CBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DFC7E6B12E658C2400F68CBC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFC7E6B02E658C2400F68CBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DFC7E6B42E659C3500F68CBC /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFC7E6B02E658C2400F68CBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DFC7E6982E65869300F68CBC /* Project object */;
 }
