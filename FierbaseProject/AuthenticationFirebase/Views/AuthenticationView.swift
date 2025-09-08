@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import GoogleSignIn
+import GoogleSignInSwift
 
 struct AuthenticationView: View {
     @Binding var showAuthenticationView: Bool
+    @State var viewModel: AuthenticationViewModel
     var body: some View {
         NavigationStack {
             VStack {
@@ -36,9 +39,20 @@ struct AuthenticationView: View {
                         .clipShape(Capsule())
                         .padding(.horizontal)
                 }
+         
+                GoogleSignInButton(viewModel: GoogleSignInButtonViewModel(scheme: .dark, style: .wide, state: .normal)) {
+                   singInWithGoogle()
+                }
+                
                 Spacer()
             }
             .navigationTitle("Sing In")
         }
     }
-}
+    private func singInWithGoogle() {
+        Task {
+               let _ = try await viewModel.signInWithGoogle()
+                showAuthenticationView = false
+            }
+        }
+    }

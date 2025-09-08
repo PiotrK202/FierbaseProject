@@ -24,7 +24,7 @@ struct RootView: View {
         }
         .fullScreenCover(isPresented: $showAuthenticationView) {
             NavigationStack {
-                AuthenticationView(showAuthenticationView: $showAuthenticationView)
+                AuthenticationView(showAuthenticationView: $showAuthenticationView, viewModel: AuthenticationViewModel(repository: AuthRepository()))
             }
         }
     }
