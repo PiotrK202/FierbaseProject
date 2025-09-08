@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 @main
 struct FierbaseProjectApp: App {
@@ -14,7 +15,7 @@ struct FierbaseProjectApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthenticationView()
+            RootView(viewModel: RootViewModel())
         }
     }
 }

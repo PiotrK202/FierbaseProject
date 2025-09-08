@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct AuthenticationView: View {
+    @Binding var showAuthenticationView: Bool
     var body: some View {
         NavigationStack {
             VStack {
                 NavigationLink {
-                    SingInWithEmailView(viewModel: SingInWithEmailViewModel(repository: AuthRepository()))
+                    SingInWithEmailView(viewModel: SingInWithEmailViewModel(repository: AuthRepository()), showAuthenticationView: $showAuthenticationView)
                 } label: {
                     Text("Sing In with email")
                         .font(.headline)
@@ -21,10 +22,10 @@ struct AuthenticationView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
                         .clipShape(Capsule())
-                        .padding()
+                        .padding(.horizontal)
                 }
                 NavigationLink {
-                    LoginWithEmailView(viewModel: LoginWithEmailViewModel(repository: AuthRepository()))
+                    LoginWithEmailView(viewModel: LoginWithEmailViewModel(repository: AuthRepository()), showAuthenticationView: $showAuthenticationView)
                 } label: {
                     Text("Login with email")
                         .font(.headline)
@@ -33,15 +34,11 @@ struct AuthenticationView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
                         .clipShape(Capsule())
-                        .padding()
+                        .padding(.horizontal)
                 }
                 Spacer()
             }
             .navigationTitle("Sing In")
         }
     }
-}
-
-#Preview {
-    AuthenticationView()
 }

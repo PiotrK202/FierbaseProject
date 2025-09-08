@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SingInWithEmailView: View {
     @State var viewModel: SingInWithEmailViewModel
+    @Binding var showAuthenticationView: Bool
     var body: some View {
         VStack {
             TextField("Email",text: $viewModel.email)
@@ -45,14 +46,11 @@ struct SingInWithEmailView: View {
         Task {
             do {
                 let _ = try await viewModel.creatUser()
+                showAuthenticationView = false
                 print("succes")
             } catch {
                 print(error)
             }
         }
     }
-}
-
-#Preview {
-    SingInWithEmailView(viewModel: SingInWithEmailViewModel(repository: AuthRepository()))
 }
