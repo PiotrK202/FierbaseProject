@@ -20,4 +20,8 @@ final class AuthenticationViewModel {
     func signInWithGoogle() async throws -> AuthDataResultUserModel {
         return try await repository.signInWithGoogle()
     }
+    
+    func singInAnonymous() async throws {
+       let _ = try await repository.singInAnonymously()
+    }
 }

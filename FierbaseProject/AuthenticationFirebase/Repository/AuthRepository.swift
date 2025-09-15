@@ -15,10 +15,15 @@ protocol AuthProtocol {
     func createUser(email: String, password: String) async throws -> AuthDataResultUserModel
     func signInUser(email: String, password: String) async throws -> AuthDataResultUserModel
     func signInWithGoogle() async throws -> AuthDataResultUserModel
-
+    func singInAnonymously() async throws -> AuthDataResultUserModel
 }
 
 final class AuthRepository: AuthProtocol {
+    func singInAnonymously() async throws -> AuthDataResultUserModel {
+        let authDataResult = try await Auth.auth().signInAnonymously()
+        return AuthDataResultUserModel(user: authDataResult.user)
+    }
+    
     func createUser(email: String, password: String) async throws -> AuthDataResultUserModel {
         let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
         return AuthDataResultUserModel(user: authDataResult.user)

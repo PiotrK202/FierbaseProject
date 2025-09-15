@@ -44,11 +44,32 @@ struct AuthenticationView: View {
                    singInWithGoogle()
                 }
                 
+                Button {
+                    singInAnonymously()
+                } label: {
+                    Text("Sing In anonymously")
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .frame(height: 44)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .clipShape(Capsule())
+                        .padding(.horizontal)
+                }
+
                 Spacer()
             }
             .navigationTitle("Sing In")
         }
     }
+    
+    private func singInAnonymously() {
+        Task {
+            let _ = try await viewModel.singInAnonymous()
+            showAuthenticationView = false
+        }
+    }
+    
     private func singInWithGoogle() {
         Task {
                let _ = try await viewModel.signInWithGoogle()
